@@ -1,0 +1,9 @@
+import csv
+rf = open(r'C:\Users\abhrout\Desktop\Textfile.txt', 'r') #input file handle
+wf = open(r'C:\Users\abhrout\Desktop\Book1.csv','w') #output file handle
+writer = csv.writer(wf)
+ 
+for row in rf.readlines():
+    writer.writerow(row.split())
+rf.close() # close input file handle
+wf.close() # close output file handle
